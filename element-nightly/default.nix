@@ -64,7 +64,7 @@ let
     dontUnpack = true;
 
     nativeBuildInputs = with pkgs; [
-      wrapGAppsHook
+      wrapGAppsHook3
       glib
       xdg-utils
     ];
