@@ -48,7 +48,7 @@ let
     pkgs.libxrandr
     pkgs.libxrender
     pkgs.libxtst
-    pkgs.libxScrnSaver
+    pkgs.libxscrnsaver
     pkgs.libxcb
     ] + ":${pkgs.stdenv.cc.cc.lib}/lib64";
 
