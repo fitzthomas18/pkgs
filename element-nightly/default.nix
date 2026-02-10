@@ -37,19 +37,19 @@ let
     pkgs.libv4l
     pkgs.xdg-utils
     pkgs.libxkbcommon
-    pkgs.xorg.libxkbfile
-    pkgs.xorg.libX11
-    pkgs.xorg.libXcomposite
-    pkgs.xorg.libXcursor
-    pkgs.xorg.libXdamage
-    pkgs.xorg.libXext
-    pkgs.xorg.libXfixes
-    pkgs.xorg.libXi
-    pkgs.xorg.libXrandr
-    pkgs.xorg.libXrender
-    pkgs.xorg.libXtst
-    pkgs.xorg.libXScrnSaver
-    pkgs.xorg.libxcb
+    pkgs.libxkbfile
+    pkgs.libx11
+    pkgs.libxcomposite
+    pkgs.libxcursor
+    pkgs.libxdamage
+    pkgs.libxext
+    pkgs.libxfixes
+    pkgs.libxi
+    pkgs.libxrandr
+    pkgs.libxrender
+    pkgs.libxtst
+    pkgs.libxScrnSaver
+    pkgs.libxcb
     ] + ":${pkgs.stdenv.cc.cc.lib}/lib64";
 
   unwrapped = pkgs.stdenv.mkDerivation {
