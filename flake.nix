@@ -21,6 +21,7 @@
     fetchurl = pkgs.fetchurl; stdenv = pkgs.stdenv; lib = inputs.nixpkgs.lib;
   in {
     packages.x86_64-linux = {
+      colloid-kvantum = import ./colloid-kvantum { inherit self pkgs; };
       element-desktop-nightly = import ./element-nightly { inherit self pkgs; };
       ff-extensions = import ./ff-extensions { inherit buildFirefoxXpiAddon lib fetchurl stdenv; };
       hypr-share-picker = import ./hypr-share-picker { inherit self inputs pkgs; };
