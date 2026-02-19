@@ -46,10 +46,10 @@
     };
     "betterttv" = buildFirefoxXpiAddon {
       pname = "betterttv";
-      version = "7.6.18";
+      version = "7.6.19";
       addonId = "firefox@betterttv.net";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4660244/betterttv-7.6.18.xpi";
-      sha256 = "800a0901952398dd486c9b09b8bce1d384e2d18ca8c445b90e0b1b7e21784dda";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4684944/betterttv-7.6.19.xpi";
+      sha256 = "7fee9126186235ccac9741ad9e5159428e104ce096c8c54932e51b993755a6b8";
       meta = with lib;
       {
         homepage = "https://betterttv.com";
@@ -752,10 +752,10 @@
     };
     "proton-pass" = buildFirefoxXpiAddon {
       pname = "proton-pass";
-      version = "1.33.2";
+      version = "1.34.2";
       addonId = "78272b6fa58f4a1abaac99321d503a20@proton.me";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4644816/proton_pass-1.33.2.xpi";
-      sha256 = "98c8471383c187da7e157db4cf1f47033c058e65c9ed00d6ff3f876121ad5349";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4686427/proton_pass-1.34.2.xpi";
+      sha256 = "03b4b59bbca5acb95459c970fc83ede80c45c7b5b698afec29e53214239eea7b";
       meta = with lib;
       {
         homepage = "https://proton.me";
@@ -767,6 +767,7 @@
           "scripting"
           "storage"
           "unlimitedStorage"
+          "webNavigation"
           "webRequest"
           "webRequestBlocking"
           "https://*/*"
