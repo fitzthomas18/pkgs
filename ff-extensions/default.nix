@@ -815,10 +815,10 @@
     };
     "youtube-addon" = buildFirefoxXpiAddon {
       pname = "youtube-addon";
-      version = "4.2000";
+      version = "4.2026";
       addonId = "{3c6bf0cc-3ae2-42fb-9993-0d33104fdcaf}";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4690208/youtube_addon-4.2000.xpi";
-      sha256 = "a6472ec9fc01815930856ec985778c43877da4693de30c15ba8fc5c116208f9a";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4723468/youtube_addon-4.2026.xpi";
+      sha256 = "fdd964bb8b157e1cc7983ea1b5ca4dab4fe56690098eb23ba0c4726381766535";
       meta = with lib;
       {
         homepage = "https://github.com/code4charity/YouTube-Extension/";
@@ -826,6 +826,7 @@
         mozPermissions = [
           "contextMenus"
           "storage"
+          "unlimitedStorage"
           "https://www.youtube.com/*"
         ];
         platforms = platforms.all;
