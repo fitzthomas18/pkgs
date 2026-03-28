@@ -2,7 +2,9 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixpkgs-unstable";
     nurpkgs.url = "github:nix-community/NUR";
+    nurpkgs.inputs.nixpkgs.follows = "nixpkgs";
     firefox.url = "github:nix-community/nur-combined?dir=repos/rycee/pkgs/firefox-addons/";
+    firefox.inputs.nixpkgs.follows = "nixpkgs";
     hyprland-preview-share-picker = {
       url = "github:whysobad/hyprland-preview-share-picker";
       flake = false;
@@ -26,6 +28,7 @@
       ff-extensions = import ./ff-extensions { inherit buildFirefoxXpiAddon lib fetchurl stdenv; };
       hypr-share-picker = import ./hypr-share-picker { inherit self inputs pkgs; };
       krisp-patcher = import ./krisp-patcher { inherit self pkgs; };
+      monochrome = import ./monochrome { inherit self pkgs; };
       profile-connector = import ./profile-connector { inherit self pkgs; };
     };
     packages.aarch64-linux.rpi-lgpio = import ./rpi-lgpio { inherit self lib apkgs; };
