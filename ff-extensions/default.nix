@@ -2,10 +2,10 @@
   {
     "adguard-adblocker" = buildFirefoxXpiAddon {
       pname = "adguard-adblocker";
-      version = "5.3.0.8";
+      version = "5.3.1.7";
       addonId = "adguardadblocker@adguard.com";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4690475/adguard_adblocker-5.3.0.8.xpi";
-      sha256 = "a56388c67d7bfdbc8c81333d1a6454c4a1bfb0b08272174205508d35501337a9";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4745422/adguard_adblocker-5.3.1.7.xpi";
+      sha256 = "1ccbd5543b0fe16fc48855b3fb825dce6d3b145a111381294833476e2dafc31d";
       meta = with lib;
       {
         homepage = "https://adguard.com/";
@@ -60,10 +60,10 @@
     };
     "darkreader" = buildFirefoxXpiAddon {
       pname = "darkreader";
-      version = "4.9.123";
+      version = "4.9.124";
       addonId = "addon@darkreader.org";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4710145/darkreader-4.9.123.xpi";
-      sha256 = "9a3e6cdac53f20257bd81264532c16afedad00eb2623bded89ed2b30b1e40243";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4748915/darkreader-4.9.124.xpi";
+      sha256 = "ce703c98545999cee0b5c416f4fd4a3080f1405440f005d5c5cf23ac0868bcbd";
       meta = with lib;
       {
         homepage = "https://darkreader.org/";
@@ -120,10 +120,10 @@
     };
     "hide-google-ai-overviews" = buildFirefoxXpiAddon {
       pname = "hide-google-ai-overviews";
-      version = "1.6";
+      version = "1.6.2";
       addonId = "Google_AI_Overviews_Blocker@zachbarnes.dev";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4703858/hide_google_ai_overviews-1.6.xpi";
-      sha256 = "ce31d0e2cc1ff0679f58a87a2f4c9ed8b1acdb66b9a19ab7d11d73efaf8bb907";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4752435/hide_google_ai_overviews-1.6.2.xpi";
+      sha256 = "40214704eefbb4dd512b1f098895bbd617506056918e786df41d6d62a551408c";
       meta = with lib;
       {
         homepage = "https://zachbarnes.dev";
@@ -131,6 +131,7 @@
         license = licenses.mit;
         mozPermissions = [
           "scripting"
+          "storage"
           "*://*.google.com/search*"
           "*://*.google.ad/search*"
           "*://*.google.ae/search*"
@@ -752,10 +753,10 @@
     };
     "proton-pass" = buildFirefoxXpiAddon {
       pname = "proton-pass";
-      version = "1.35.0";
+      version = "1.36.0";
       addonId = "78272b6fa58f4a1abaac99321d503a20@proton.me";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4719659/proton_pass-1.35.0.xpi";
-      sha256 = "5b5b254a5221df31e93aab5be469cb484526357cccea3bbaa73d914b12c0d468";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4755939/proton_pass-1.36.0.xpi";
+      sha256 = "78ca6bf3e22d3e02e687524cb96693237989f1f000ba1a08ac4dd153df4eb54e";
       meta = with lib;
       {
         homepage = "https://proton.me";
