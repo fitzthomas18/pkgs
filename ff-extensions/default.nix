@@ -120,10 +120,10 @@
     };
     "hide-google-ai-overviews" = buildFirefoxXpiAddon {
       pname = "hide-google-ai-overviews";
-      version = "1.6.2";
+      version = "1.6.4";
       addonId = "Google_AI_Overviews_Blocker@zachbarnes.dev";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4752435/hide_google_ai_overviews-1.6.2.xpi";
-      sha256 = "40214704eefbb4dd512b1f098895bbd617506056918e786df41d6d62a551408c";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4768740/hide_google_ai_overviews-1.6.4.xpi";
+      sha256 = "4a6296d8ef731e27934c1e1d98ba60536a44942303dc5a00f851db6c875d6176";
       meta = with lib;
       {
         homepage = "https://zachbarnes.dev";
@@ -753,10 +753,10 @@
     };
     "proton-pass" = buildFirefoxXpiAddon {
       pname = "proton-pass";
-      version = "1.36.0";
+      version = "1.36.1";
       addonId = "78272b6fa58f4a1abaac99321d503a20@proton.me";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4755939/proton_pass-1.36.0.xpi";
-      sha256 = "78ca6bf3e22d3e02e687524cb96693237989f1f000ba1a08ac4dd153df4eb54e";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4768005/proton_pass-1.36.1.xpi";
+      sha256 = "4dfa20fc6698114d4e36a964594db6e7bec74bfd5b87942e33a57f242b60bb04";
       meta = with lib;
       {
         homepage = "https://proton.me";
