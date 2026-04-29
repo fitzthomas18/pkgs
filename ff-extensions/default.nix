@@ -120,10 +120,10 @@
     };
     "hide-google-ai-overviews" = buildFirefoxXpiAddon {
       pname = "hide-google-ai-overviews";
-      version = "1.6.4";
+      version = "1.6.6";
       addonId = "Google_AI_Overviews_Blocker@zachbarnes.dev";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4768740/hide_google_ai_overviews-1.6.4.xpi";
-      sha256 = "4a6296d8ef731e27934c1e1d98ba60536a44942303dc5a00f851db6c875d6176";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4781283/hide_google_ai_overviews-1.6.6.xpi";
+      sha256 = "eb61577cb793cde54b9b46b9545a2ed4223ce8405e419f6e79438817c6ba1eaf";
       meta = with lib;
       {
         homepage = "https://zachbarnes.dev";
