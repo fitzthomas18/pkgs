@@ -16,13 +16,10 @@ pkgs.stdenv.mkDerivation {
     runHook preInstall
     mkdir -p extracted
     unzip -o "$src" -d extracted
-
-    mkdir -p $out/share/simshmbridge
-    cp extracted/acbridge.exe $out/share/simshmbridge/
-    cp extracted/pcars2bridge.exe $out/share/simshmbridge/
-    cp extracted/rf2bridge.exe $out/share/simshmbridge/ 2>/dev/null || true
-
     mkdir -p $out/bin
+    cp extracted/acbridge.exe $out/bin/
+    cp extracted/pcars2bridge.exe $out/bin/
+    cp extracted/rf2bridge.exe $out/bin/ 2>/dev/null || true
     rm -rf extracted
     runHook postInstall
   '';
@@ -30,17 +27,14 @@ pkgs.stdenv.mkDerivation {
   postInstall = ''
     cat > $out/bin/acbridge.exe <<'WRAPPER'
     #!/bin/sh
-    # Target /var/lib with user separation for impermanence compatibility
-    RUN_DIR="/var/lib/simshmbridge/$(id -u)"
-
-    if [ ! -L "$RUN_DIR/acbridge.exe" ]; then
-      DIR="$(dirname "$(dirname "$(readlink -f "$0")")")/share/simshmbridge"
-      mkdir -p "$RUN_DIR"
-      ln -sf "$DIR/acbridge.exe" "$RUN_DIR/"
-      ln -sf "$DIR/pcars2bridge.exe" "$RUN_DIR/" 2>/dev/null || true
-      ln -sf "$DIR/rf2bridge.exe" "$RUN_DIR/" 2>/dev/null || true
+    if [ ! -L "/home/thomas/.local/share/simshmbridge/acbridge.exe" ]; then
+      DIR="$(dirname "$(readlink -f "$0")")"
+      mkdir -p "/home/thomas/.local/share/simshmbridge"
+      ln -sf "$DIR/acbridge.exe" "/home/thomas/.local/share/simshmbridge/"
+      ln -sf "$DIR/pcars2bridge.exe" "/home/thomas/.local/share/simshmbridge/" 2>/dev/null || true
+      ln -sf "$DIR/rf2bridge.exe" "/home/thomas/.local/share/simshmbridge/" 2>/dev/null || true
     fi
-    exec "$RUN_DIR/acbridge.exe" "$@"
+    exec "/home/thomas/.local/share/simshmbridge/acbridge.exe" "$@"
     WRAPPER
     chmod +x $out/bin/acbridge.exe
   '';
