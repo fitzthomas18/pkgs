@@ -23,11 +23,19 @@
     fetchurl = pkgs.fetchurl; stdenv = pkgs.stdenv; lib = inputs.nixpkgs.lib;
   in {
     packages.x86_64-linux = {
+      # General Packages
       colloid-kvantum = import ./colloid-kvantum { inherit self pkgs; };
       element-desktop-nightly = import ./element-nightly { inherit self pkgs; };
       ff-extensions = import ./ff-extensions { inherit buildFirefoxXpiAddon lib fetchurl stdenv; };
       hypr-share-picker = import ./hypr-share-picker { inherit self inputs pkgs; };
       krisp-patcher = import ./krisp-patcher { inherit self pkgs; };
+
+      # Sim Racing Packages
+      # Original Source - https://github.com/wasabinator/nix-config
+      acbridge = import ./simracing/acbridge.nix { inherit self lib pkgs; };
+      monocoque = import ./simracing/monocoque.nix { inherit self lib pkgs; };
+      simapi-all = import ./simracing/simapi.nix { inherit self lib pkgs; };
+      simshmbridge = import ./simracing/simshmbridge.nix { inherit self lib pkgs; };
     };
     packages.aarch64-linux.rpi-lgpio = import ./rpi-lgpio { inherit self lib apkgs; };
     devShells.x86_64-linux.default = pkgs.mkShell { packages = [ pkgs.nur.repos.rycee.mozilla-addons-to-nix ]; };
