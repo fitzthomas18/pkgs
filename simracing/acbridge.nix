@@ -25,18 +25,18 @@ pkgs.stdenv.mkDerivation {
   '';
 
   postInstall = ''
-    cat > $out/bin/acbridge.exe <<'WRAPPER'
+    cat > $out/bin/acbridge <<'WRAPPER'
     #!/bin/sh
-    if [ ! -L "/home/thomas/.local/share/simshmbridge/acbridge.exe" ]; then
+    if [ ! -L "$HOME/.local/share/simshmbridge/acbridge.exe" ]; then
       DIR="$(dirname "$(readlink -f "$0")")"
-      mkdir -p "/home/thomas/.local/share/simshmbridge"
-      ln -sf "$DIR/acbridge.exe" "/home/thomas/.local/share/simshmbridge/"
-      ln -sf "$DIR/pcars2bridge.exe" "/home/thomas/.local/share/simshmbridge/" 2>/dev/null || true
-      ln -sf "$DIR/rf2bridge.exe" "/home/thomas/.local/share/simshmbridge/" 2>/dev/null || true
+      mkdir -p "$HOME/.local/share/simshmbridge"
+      ln -sf "$DIR/acbridge.exe" "$HOME/.local/share/simshmbridge/"
+      ln -sf "$DIR/pcars2bridge.exe" "$HOME/.local/share/simshmbridge/" 2>/dev/null || true
+      ln -sf "$DIR/rf2bridge.exe" "$HOME/.local/share/simshmbridge/" 2>/dev/null || true
     fi
-    exec "/home/thomas/.local/share/simshmbridge/acbridge.exe" "$@"
+    exec "$HOME/.local/share/simshmbridge/acbridge.exe" "$@"
     WRAPPER
-    chmod +x $out/bin/acbridge.exe
+    chmod +x $out/bin/acbridge
   '';
 
   meta = with lib; {
