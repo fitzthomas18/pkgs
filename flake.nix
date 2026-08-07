@@ -29,6 +29,7 @@
       ff-extensions = import ./ff-extensions { inherit buildFirefoxXpiAddon lib fetchurl stdenv; };
       hypr-share-picker = import ./hypr-share-picker { inherit self inputs pkgs; };
       krisp-patcher = import ./krisp-patcher { inherit self pkgs; };
+      write = import ./write { inherit self pkgs; };
 
       # Sim Racing Packages
       # Original Source - https://github.com/wasabinator/nix-config
