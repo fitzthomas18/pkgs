@@ -5,7 +5,7 @@ pkgs.stdenv.mkDerivation rec {
   version = "0.2.18";
 
   src = pkgs.fetchFromGitHub {
-    owner = "wasabinator";
+    owner = "Spacefreak18";
     repo = "monocoque";
     rev = "e3487b3652ba64285949a929f43c0762683a8b09";
     hash = "sha256-5E/8zHmYqaM33S5E0mhL1CEWB8B/ER9T8aAjyrQXS4k=";
